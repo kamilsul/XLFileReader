@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -36,11 +37,20 @@ public class Fileupload extends HttpServlet {
 			}
 
 			System.out.println("Choose servlet called !! ");
-
+			//Create Workbook object and pass the filename
 			XSSFWorkbook workbook = new XSSFWorkbook(new FileInputStream("C:/Users/dhana/git/XLFileReaderdhan.xlsx"));
+			//As every workbook has a sheets , so select 1 sheet 
 			XSSFSheet sheet = workbook.getSheetAt(0);
+			// Once we have the sheet select row 1 to access the data 
 			XSSFRow row = sheet.getRow(0);
+			// Once we have the row object we have the cell 0,1,2, and display the same on screen UI
 			System.out.println(row.getCell(0).getNumericCellValue() + row.getCell(1).getStringCellValue());
+			
+			// Traditional way we pass the request object to UI -- display.jsp
+			request.setAttribute("row", row);
+			RequestDispatcher rd = request.getRequestDispatcher("display.jsp");
+			rd.forward(request, response);
+			
 			
 		} catch (Exception e) {
 
