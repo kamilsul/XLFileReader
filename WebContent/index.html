@@ -5,11 +5,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="choose" method="get">
-		<b>Select the spreadsheet: </b><input
-			type="file" name="xlfile" accept="file_extension"><br>
-			(".xls" and ".xlsx" )<br> <br><input
-			type="submit" name="select" value="Select">
+	<form action="choose" method="post" enctype="multipart/form-data">
+		<b>Select the spreadsheet: </b><input type="file" name="xlfile"
+			accept="file_extension" multiple><br> (".xls" and ".xlsx" )<br>
+		<br>
+		<input type="submit" name="select" value="Select">
 
 	</form>
 </body>
