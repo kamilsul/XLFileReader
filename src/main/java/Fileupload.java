@@ -48,8 +48,10 @@ public class Fileupload extends HttpServlet {
 			
 			// Traditional way we pass the request object to UI -- display.jsp
 			request.setAttribute("row", row);
+			//get a rd object and forward the row object to display.jsp 
 			RequestDispatcher rd = request.getRequestDispatcher("display.jsp");
 			rd.forward(request, response);
+			// Use expression language in display.jsp to show the content of xls file.
 			
 			
 		} catch (Exception e) {
