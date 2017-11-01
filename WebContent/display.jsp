@@ -6,11 +6,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
-
+<body bgcolor="#D7DDE8">
+<div align="center">
+	<h1 align="center" >*********** XL-File Reader *********</h1>
+	<hr>
 	
-	<h2>${row.getCell(0).getNumericCellValue()}</h2>
+	<h2 align="center">${row.getCell(0).getNumericCellValue()}</h2>
 
-
+</div>
 </body>
 </html>
