@@ -6,17 +6,13 @@
 </head>
 <body bgcolor="#BBD2C5">
 	<div align="center">
-	<h1 align="center" >*********** XL-File Reader *********</h1>
-	<hr>
-	<br>
-	<br>
-	<form action="choose" method="post" enctype="multipart/form-data">
-		<b>Select the spreadsheet: </b><input type="file" name="xlfile"
-			accept="file_extension" multiple><br> (".xls" and ".xlsx" )<br>
-		<br>
-		<input type="submit" name="select" value="Select">
-
-	</form>
+		<h1 align="center">*********** XL-File Reader *********</h1>
+		<hr>
+		<br> <br>
+		<form action="reader" method="post" enctype="multipart/form-data">
+			<input type="text" name="description" /> <input type="file"
+				name="file" /> <input type="submit" />
+		</form>
 	</div>
 </body>
 </html>
